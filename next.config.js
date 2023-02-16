@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     domains: [
       'files.stripe.com',
+      "s3-alpha-sig.figma.com"
     ]
   }
 }
