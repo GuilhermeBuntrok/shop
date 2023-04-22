@@ -19,8 +19,8 @@ export default async function handler(
     return res.status(404).json({ error: 'products not found' })
   }
 
-  const successUrl = `${process.env.NEXT_URL}/success?session_id={CHECKOUT_SESSION_ID}`;
-  const cancelUrl = `${process.env.NEXT_URL}/`;
+  const successUrl = `https://shop-blush-seven.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`;
+  const cancelUrl = `https://shop-blush-seven.vercel.app/`;
 
   const checkoutSession = await stripe.checkout.sessions.create({
     success_url: successUrl,
